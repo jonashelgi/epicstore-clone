@@ -1,0 +1,46 @@
+@import "../../utils/colors.css";
+
+.col {
+	padding-bottom: 15px;
+}
+.card {
+	background-color: var(--second);
+	padding-left: 30px;
+	padding-right: 30px;
+	color: var(--main);
+}
+
+.title {
+	padding-bottom: 10px;
+}
+
+.text {
+	font-size: 24px;
+}
+
+.tools {
+	font-size: 24px;
+	padding-top: 10px;
+}
+
+.icon {
+	margin-right: 15px;
+	color: var(--main);
+}
+
+.boxShadow {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.offCanvas {
+	background-color: var(--second);
+}
+
+.offCanvasTitle {
+	color: var(--main);
+}
+
+.offCanvasBody {
+	color: var(--main);
+	font-size: 22px;
+}
