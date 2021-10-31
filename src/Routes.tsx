@@ -4,7 +4,7 @@ import { Switch, Route, useLocation } from "react-router-dom";
 
 import App from "./App";
 import { Loading } from "./components";
-const Home = lazy(() => import("./scenes/Home/Home"));
+const Store = lazy(() => import("./scenes/Store/Store"));
 
 export default function Routes() {
 	const location = useLocation();
@@ -14,7 +14,7 @@ export default function Routes() {
 				<Switch location={location} key={location.pathname}>
 					<Route>
 						<Suspense fallback={<Loading />}>
-							<Home />
+							<Store />
 						</Suspense>
 					</Route>
 				</Switch>
