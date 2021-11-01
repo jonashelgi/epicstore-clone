@@ -5,7 +5,7 @@ interface PropTypes {
 }
 
 function App({ children }: PropTypes) {
-	return <div>{children}</div>;
+	return <div style={{ backgroundColor: "#181414" }}>{children}</div>;
 }
 
 export default App;

@@ -1,4 +1,13 @@
 @import "../../utils/colors.css";
 
+.root {
+  text-decoration: none;
+	padding: 30px;
+	height: 100vh;
+	flex-direction: column;
+	border-right: 1px solid var(--dark200);
+}
 
-
+.topIcon {
+	color: var(--white);
+}
