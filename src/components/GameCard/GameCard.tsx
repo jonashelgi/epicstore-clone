@@ -1,16 +1,19 @@
 import React from "react";
-import { Col, Container, Row, Image, Badge } from "react-bootstrap";
+import { Col, Container, Row, Image } from "react-bootstrap";
 
 import data from "../../utils/Data/data";
 import { getData } from "../../utils/functions/getData";
+import styles from "./GameCard.module.css";
 
-export type Size = 2 | 3 | 4 | 5;
+export type Size = 2 | 3 | 4 | 6;
 type Sizes = {
 	[Type in Size]: {
+		xs: number;
 		sm: number;
 		md: number;
 		lg: number;
 		xl: number;
+		xxl: number;
 		// True for tall false for wide.
 		layout: boolean;
 	};
@@ -18,65 +21,91 @@ type Sizes = {
 
 const list: Sizes = {
 	2: {
-		sm: 6,
-		md: 6,
+		xs: 12,
+		sm: 12,
+		md: 12,
 		lg: 6,
 		xl: 6,
+		xxl: 3,
 		layout: false,
 	},
 	3: {
+		xs: 12,
 		sm: 4,
 		md: 4,
 		lg: 4,
 		xl: 4,
+		xxl: 3,
 		layout: false,
 	},
 	4: {
+		xs: 12,
 		sm: 3,
 		md: 3,
 		lg: 3,
 		xl: 3,
+		xxl: 3,
 		layout: true,
 	},
-	5: {
-		sm: 2,
-		md: 2,
-		lg: 2,
-		xl: 2,
+	6: {
+		xs: 12,
+		sm: 12,
+		md: 5,
+		lg: 4,
+		xl: 3,
+		xxl: 2,
 		layout: true,
 	},
 };
 
 interface GameCardProps {
 	num: Size;
+	style?: React.CSSProperties;
 }
 
-const GameCard = ({ num }: GameCardProps) => {
-	var [info] = getData(data, 4);
-	console.log(info);
+const GameCard = ({ num, style }: GameCardProps) => {
+	var [info] = getData(data, num);
+
 	return (
-		<Container fluid>
-			<Row>
-				<Col
-					sm={list[num].sm}
-					md={list[num].md}
-					lg={list[num].lg}
-					xl={list[num].xl}
-					style={{ border: "2px solid red" }}
-				>
-					<Image src={info[1].img.wide} fluid />
-					<div style={{ color: "white" }}>
-						<h3>{info[1].title}</h3>
-						<h4>{info[1].company}</h4>
-						<div style={{display: "flex"}}>
-							<Badge bg="primary">{info[1].price.discount}</Badge>
-							<p style={{ textDecoration: "line-through", color: "gray" }}>
-								{info[1].price.originalPrice}
-							</p>
-							<p>{info[1].price.discountPrice}</p>
+		<Container fluid style={{ padding: "0px 0px 0px 0px" }}>
+			<Row md={4}>
+				{info.map((game: any, index: number) => (
+					<Col
+						sm={list[num].sm}
+						md={list[num].md}
+						lg={list[num].lg}
+						xl={list[num].xl}
+						key={index}
+						className={styles.col}
+					>
+						{list[num].layout ? (
+							<Image src={game.img.tall} fluid className={styles.img} />
+						) : (
+							<Image src={game.img.wide} fluid className={styles.img} />
+						)}
+						<div>
+							<div className={styles.colorwhite}>{game.title}</div>
+							<div className={styles.colordark}>{game.developer}</div>
 						</div>
-					</div>
-				</Col>
+						{game.price.discount === "0%" ? (
+							<div className={styles.price}>
+								<div className={styles.colorwhite}>
+									{game.price.originalPrice}
+								</div>
+							</div>
+						) : (
+							<div className={styles.price}>
+								<div className={styles.discount}>{game.price.discount}</div>
+								<div className={styles.originalPrice}>
+									{game.price.originalPrice}
+								</div>
+								<div className={styles.colorwhite}>
+									{game.price.discountPrice}
+								</div>
+							</div>
+						)}
+					</Col>
+				))}
 			</Row>
 		</Container>
 	);

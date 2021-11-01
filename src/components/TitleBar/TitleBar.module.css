@@ -1,0 +1,33 @@
+@import "../../utils/globalConsts/colors.css";
+
+.root {
+	display: flex;
+}
+
+.icon {
+  fill: var(--white);
+}
+
+.title {
+	color: var(--white);
+  font-size: large;
+}
+
+.btnBox {
+	margin-left: auto;
+}
+
+.btn {
+	border: 1px solid var(--dark100);
+  border-radius: 5px;
+	background-color: var(--dark300);
+  color: var(--white);
+  margin-bottom: 15px;
+  padding: 4px 10px 4px 10px;
+  transition: 0.3s;
+  font-size: small;
+}
+
+.btn:hover {
+	border: 1px solid var(--dark200);
+}

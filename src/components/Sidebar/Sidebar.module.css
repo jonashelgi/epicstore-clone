@@ -6,8 +6,30 @@
 	height: 100vh;
 	flex-direction: column;
 	border-right: 1px solid var(--dark200);
+	padding-right: 45px;
 }
 
 .topIcon {
 	color: var(--white);
+
+}
+
+.top {
+	margin-left: 14px;
+}
+
+.bottom {
+	position: absolute;
+	top: 85%;
+	margin-left: 14px;
+}
+
+@media (max-width: 576px) {
+	.root {
+		height: auto;
+	}
+  .bottom {
+		position: relative;
+		top: 0%;
+	}
 }

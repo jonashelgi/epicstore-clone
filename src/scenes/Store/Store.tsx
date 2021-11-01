@@ -1,19 +1,31 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 
-import { Container, Row, Col } from "react-bootstrap";
-
-import { GameCard, Sidebar } from "../../components";
+import { Sidebar } from "../../components";
+import { FreeGames } from "./components/FreeGames";
+import { Halloween } from "./components/Halloween";
+import { Wishlist } from "./components/Wishlist";
 import styles from "./Store.module.css";
 
 const Store = () => {
 	return (
-		<Container fluid className={styles.root}>
+		<Container fluid>
 			<Row>
-				<Col sm={2}>
-					<Sidebar />
+				<Col
+					sm={6}
+					md={4}
+					lg={3}
+					xl={2}
+				>
+					<div className={styles.sidebar}>
+						<Sidebar />
+					</div>
 				</Col>
-				<Col sm={10}>
-					<GameCard num={4}/>
+
+				<Col sm={6} md={8} lg={9} xl={10}>
+					<Halloween />
+					<Wishlist />
+					<FreeGames />
 				</Col>
 			</Row>
 		</Container>

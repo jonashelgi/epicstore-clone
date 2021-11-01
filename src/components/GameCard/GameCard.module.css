@@ -1,0 +1,41 @@
+@import "../../utils/globalConsts/colors.css";
+
+.col {
+  padding-bottom: 30px;
+}
+.img {
+  border-radius: 8px;
+  margin-bottom: 15px;
+	transition: 0.3s;
+}
+
+.img:hover {
+	opacity: 0.8;
+}
+.discount {
+	background-color: var(--discount);
+  color: var(--white);
+	border-radius: 4px;
+	padding: 3px 8px 3px 8px;
+}
+
+.colorwhite {
+	color: var(--white);
+}
+
+.colordark {
+	color: var(--dark100);
+}
+
+.price {
+	display: flex;
+	align-items: center;
+  padding-top: 20px;
+}
+
+.originalPrice {
+	text-decoration: line-through;
+	color: var(--dark100);
+	padding: 0px 15px 0px 15px;
+}
+

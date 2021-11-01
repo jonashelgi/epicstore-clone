@@ -1,5 +1,27 @@
 @import "../../utils/globalConsts/colors.css";
 
-.root {
-  padding-left: 0%;
+/* .root {
+	padding-left: 0%;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 15%;
+	min-width: 150px;
+}
+
+.content {
+	margin-left: 20%;
+	margin-right: 5%;
+	width: 75%;
+	padding-top: 100px;
+} */
+
+@media (min-width: 576px) {
+  .sidebar {
+		position: fixed;
+	}
 }

@@ -6,18 +6,18 @@ import { IconLink } from "../../components";
 const Sidebar = () => {
 	return (
 		<div className={styles.root}>
-			<div className={styles.topIcon}>
+			<div className={styles.topIcon} style={{ marginLeft: "10px" }}>
 				<IconLink
 					to="home"
 					icon="game"
 					size="lg"
 					color="#fdfdfd"
 					title="This is a CLONE"
-					marginRight={30}
+					marginRight={21}
 					paddingBottom={40}
 				/>
 			</div>
-			<div>
+			<div className={styles.top}>
 				<IconLink
 					to="home"
 					icon="home"
@@ -47,7 +47,7 @@ const Sidebar = () => {
 					paddingBottom={20}
 				/>
 			</div>
-			<div style={{ position: "fixed", top: "80%" }}>
+			<div className={styles.bottom}>
 				<IconLink
 					to="home"
 					icon="download"
