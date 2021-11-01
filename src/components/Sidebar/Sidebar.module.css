@@ -1,17 +1,14 @@
 @import "../../utils/globalConsts/colors.css";
 
 .root {
-  text-decoration: none;
+	text-decoration: none;
 	padding: 30px;
 	height: 100vh;
 	flex-direction: column;
-	border-right: 1px solid var(--dark200);
-	padding-right: 45px;
 }
 
 .topIcon {
 	color: var(--white);
-
 }
 
 .top {
@@ -28,7 +25,7 @@
 	.root {
 		height: auto;
 	}
-  .bottom {
+	.bottom {
 		position: relative;
 		top: 0%;
 	}

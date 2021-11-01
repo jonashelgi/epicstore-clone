@@ -77,6 +77,7 @@ const GameCard = ({ num, style }: GameCardProps) => {
 						xl={list[num].xl}
 						key={index}
 						className={styles.col}
+						style={{cursor: "pointer"}}
 					>
 						{list[num].layout ? (
 							<Image src={game.img.tall} fluid className={styles.img} />
@@ -88,7 +89,7 @@ const GameCard = ({ num, style }: GameCardProps) => {
 							<div className={styles.colordark}>{game.developer}</div>
 						</div>
 						{game.price.discount === "0%" ? (
-							<div className={styles.price}>
+							<div className={styles.single}>
 								<div className={styles.colorwhite}>
 									{game.price.originalPrice}
 								</div>

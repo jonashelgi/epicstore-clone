@@ -1,6 +1,5 @@
 import React from "react";
-import { GameCard } from "../../../../components";
-import { TitleBar } from "../../../../components/TitleBar";
+import { TitleBar, GameCard } from "../../../../components";
 
 const Halloween = () => {
 	return (

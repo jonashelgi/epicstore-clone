@@ -1,10 +1,9 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-import { Sidebar } from "../../components";
-import { FreeGames } from "./components/FreeGames";
-import { Halloween } from "./components/Halloween";
-import { Wishlist } from "./components/Wishlist";
+import { Header, Sidebar } from "../../components";
+import { Halloween, Wishlist, FreeGames } from "./components";
+
 import styles from "./Store.module.css";
 
 const Store = () => {
@@ -22,7 +21,8 @@ const Store = () => {
 					</div>
 				</Col>
 
-				<Col sm={6} md={8} lg={9} xl={10}>
+				<Col sm={6} md={8} lg={9} xl={10} className={styles.border}>
+					<Header />
 					<Halloween />
 					<Wishlist />
 					<FreeGames />

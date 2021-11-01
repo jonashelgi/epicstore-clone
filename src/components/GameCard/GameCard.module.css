@@ -1,11 +1,11 @@
 @import "../../utils/globalConsts/colors.css";
 
 .col {
-  padding-bottom: 30px;
+	padding-bottom: 30px;
 }
 .img {
-  border-radius: 8px;
-  margin-bottom: 15px;
+	border-radius: 8px;
+	margin-bottom: 15px;
 	transition: 0.3s;
 }
 
@@ -14,7 +14,7 @@
 }
 .discount {
 	background-color: var(--discount);
-  color: var(--white);
+	color: var(--white);
 	border-radius: 4px;
 	padding: 3px 8px 3px 8px;
 }
@@ -30,7 +30,13 @@
 .price {
 	display: flex;
 	align-items: center;
-  padding-top: 20px;
+	padding-top: 20px;
+}
+
+.single {
+	display: flex;
+	align-items: center;
+	padding-top: 23px;
 }
 
 .originalPrice {
@@ -38,4 +44,3 @@
 	color: var(--dark100);
 	padding: 0px 15px 0px 15px;
 }
-

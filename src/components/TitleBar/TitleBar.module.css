@@ -5,12 +5,12 @@
 }
 
 .icon {
-  fill: var(--white);
+	fill: var(--white);
 }
 
 .title {
 	color: var(--white);
-  font-size: large;
+	font-size: large;
 }
 
 .btnBox {
@@ -19,13 +19,13 @@
 
 .btn {
 	border: 1px solid var(--dark100);
-  border-radius: 5px;
+	border-radius: 5px;
 	background-color: var(--dark300);
-  color: var(--white);
-  margin-bottom: 15px;
-  padding: 4px 10px 4px 10px;
-  transition: 0.3s;
-  font-size: small;
+	color: var(--white);
+	margin-bottom: 15px;
+	padding: 4px 10px 4px 10px;
+	transition: 0.3s;
+	font-size: small;
 }
 
 .btn:hover {
