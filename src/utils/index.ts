@@ -1,1 +1,1 @@
-export * from "./globalConst";
+export * from "./globalConsts";

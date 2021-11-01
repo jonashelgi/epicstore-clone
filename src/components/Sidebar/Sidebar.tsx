@@ -9,10 +9,10 @@ const Sidebar = () => {
 			<div className={styles.topIcon}>
 				<IconLink
 					to="home"
-					icon="unreal"
+					icon="game"
 					size="lg"
 					color="#fdfdfd"
-					title="Epic Games CLONE"
+					title="This is a CLONE"
 					marginRight={30}
 					paddingBottom={40}
 				/>
@@ -41,8 +41,8 @@ const Sidebar = () => {
 				/>
 				<IconLink
 					to="home"
-					icon="unreal"
-					title="Unreal Engine"
+					icon="game"
+					title="Game engine"
 					marginRight={30}
 					paddingBottom={20}
 				/>
