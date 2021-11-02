@@ -22,11 +22,11 @@
 
 @media (min-width: 576px) {
   .sidebar {
-		position: fixed;
-	}
+    position: fixed;
+  }
 }
 
 .border {
-	border-left: 1px solid var(--dark200);
-	padding: 0px 40px 0px 40px;
+  border-left: 1px solid var(--dark200);
+  padding: 0px 40px 0px 40px;
 }

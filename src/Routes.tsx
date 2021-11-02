@@ -7,18 +7,18 @@ import { Loading } from "./components";
 const Store = lazy(() => import("./scenes/Store/Store"));
 
 export default function Routes() {
-	const location = useLocation();
-	return (
-		<App>
-			<AnimatePresence>
-				<Switch location={location} key={location.pathname}>
-					<Route>
-						<Suspense fallback={<Loading />}>
-							<Store />
-						</Suspense>
-					</Route>
-				</Switch>
-			</AnimatePresence>
-		</App>
-	);
+  const location = useLocation();
+  return (
+    <App>
+      <AnimatePresence>
+        <Switch location={location} key={location.pathname}>
+          <Route>
+            <Suspense fallback={<Loading />}>
+              <Store />
+            </Suspense>
+          </Route>
+        </Switch>
+      </AnimatePresence>
+    </App>
+  );
 }

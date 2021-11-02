@@ -1,32 +1,32 @@
 @import "../../utils/globalConsts/colors.css";
 
 .root {
-	text-decoration: none;
-	padding: 30px;
-	height: 100vh;
-	flex-direction: column;
+  text-decoration: none;
+  padding: 30px;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .topIcon {
-	color: var(--white);
+  color: var(--white);
 }
 
 .top {
-	margin-left: 14px;
+  margin-left: 14px;
 }
 
 .bottom {
-	position: absolute;
-	top: 85%;
-	margin-left: 14px;
+  position: absolute;
+  top: 85%;
+  margin-left: 14px;
 }
 
 @media (max-width: 576px) {
-	.root {
-		height: auto;
-	}
-	.bottom {
-		position: relative;
-		top: 0%;
-	}
+  .root {
+    height: auto;
+  }
+  .bottom {
+    position: relative;
+    top: 0%;
+  }
 }

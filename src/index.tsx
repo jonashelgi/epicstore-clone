@@ -7,10 +7,10 @@ import "./index.css";
 import Routes from "./Routes";
 
 ReactDOM.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<Routes />
-		</BrowserRouter>
-	</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
