@@ -1,17 +1,17 @@
 @import "../../utils/globalConsts/colors.css";
 
 .link {
-	text-decoration: none;
+  text-decoration: none;
 }
 .icon {
-	fill: var(--dark100);
-	color: var(--dark100);
-	transition: 0.3s;
-	display: flex;
-	align-items: center;
+  fill: var(--dark100);
+  color: var(--dark100);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
 }
 
 .icon:hover {
-	fill: var(--white);
-	color: var(--white);
+  fill: var(--white);
+  color: var(--white);
 }

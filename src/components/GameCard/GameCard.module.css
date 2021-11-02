@@ -10,8 +10,10 @@
 }
 
 .img:hover {
-	opacity: 0.8;
+	border: 1px solid var(--dark100);
+	transition: 0.3s;
 }
+
 .discount {
 	background-color: var(--discount);
 	color: var(--white);

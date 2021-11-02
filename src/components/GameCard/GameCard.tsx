@@ -40,9 +40,9 @@ const list: Sizes = {
 	},
 	4: {
 		xs: 12,
-		sm: 3,
-		md: 3,
-		lg: 3,
+		sm: 12,
+		md: 6,
+		lg: 4,
 		xl: 3,
 		xxl: 3,
 		layout: true,
@@ -50,16 +50,23 @@ const list: Sizes = {
 	6: {
 		xs: 12,
 		sm: 12,
-		md: 5,
+		md: 6,
 		lg: 4,
-		xl: 3,
+		xl: 2,
 		xxl: 2,
 		layout: true,
 	},
 };
 
 interface GameCardProps {
+	/*
+  How many cards do we want.
+  */
 	num: Size;
+	/*
+  To pass styles to the component
+  Currently not in use.
+  */
 	style?: React.CSSProperties;
 }
 
@@ -77,7 +84,7 @@ const GameCard = ({ num, style }: GameCardProps) => {
 						xl={list[num].xl}
 						key={index}
 						className={styles.col}
-						style={{cursor: "pointer"}}
+						style={{ cursor: "pointer" }}
 					>
 						{list[num].layout ? (
 							<Image src={game.img.tall} fluid className={styles.img} />

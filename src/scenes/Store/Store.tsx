@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
 import { Header, Sidebar } from "../../components";
-import { Halloween, Wishlist, FreeGames } from "./components";
+import { Halloween, Wishlist, FreeGames, MostPopular, GamesOnSale } from "./components";
 
 import styles from "./Store.module.css";
 
@@ -26,6 +26,8 @@ const Store = () => {
 					<Halloween />
 					<Wishlist />
 					<FreeGames />
+					<GamesOnSale />
+					<MostPopular />
 				</Col>
 			</Row>
 		</Container>

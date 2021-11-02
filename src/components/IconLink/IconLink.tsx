@@ -6,13 +6,38 @@ import { Icon } from "../../components";
 import { IconTypes, Size } from "../Icon/Icon";
 
 interface IconLinkProps {
+	/*
+  Route or url to go to when clicked.
+	 */
 	to: string;
-	icon: IconTypes;
+	/*
+  List of available icon types.
+	 */
+	icon?: IconTypes;
+	/*
+  The text that will be displayed.
+	 */
 	title?: string;
+	/*
+  Changes the color of the title
+  Can have hex and default colors.
+	 */
 	color?: string;
+	/*
+  Size of the icon.
+	 */
 	size?: Size;
+	/*
+  Adds margin to the right.
+	 */
 	marginRight?: number;
+	/*
+  Adds margin to the left.
+	 */
 	marginLeft?: number;
+	/*
+  Adds padding to the bottom.
+	 */
 	paddingBottom?: number;
 }
 
@@ -27,20 +52,45 @@ const IconLink = ({
 	paddingBottom = 0,
 }: IconLinkProps) => {
 	return (
-		<Link to={to} className={styles.link}>
-			<div
-				className={styles.icon}
-				style={{ paddingBottom: paddingBottom, fill: color, color: color }}
-			>
-				<Icon
-					type={icon}
-					size={size}
-					marginRight={marginRight}
-					marginLeft={marginLeft}
-				/>
-				{title && title}
-			</div>
-		</Link>
+		<>
+			{to.substring(0, 3) !== "htt" && (
+				<Link to={to} className={styles.link}>
+					<div
+						className={styles.icon}
+						style={{ paddingBottom: paddingBottom, fill: color, color: color }}
+					>
+						{icon && (
+							<Icon
+								type={icon}
+								size={size}
+								marginRight={marginRight}
+								marginLeft={marginLeft}
+							/>
+						)}
+						{title && <div style={{ fontSize: "15px" }}>{title}</div>}
+					</div>
+				</Link>
+			)}
+
+			{to.substring(0, 3) === "htt" && (
+				<a href={to} className={styles.link} target="_blank" rel="noreferrer">
+					<div
+						className={styles.icon}
+						style={{ paddingBottom: paddingBottom, fill: color, color: color }}
+					>
+						{icon && (
+							<Icon
+								type={icon}
+								size={size}
+								marginRight={marginRight}
+								marginLeft={marginLeft}
+							/>
+						)}
+						{title && <div style={{ fontSize: "15px" }}>{title}</div>}
+					</div>
+				</a>
+			)}
+		</>
 	);
 };
 

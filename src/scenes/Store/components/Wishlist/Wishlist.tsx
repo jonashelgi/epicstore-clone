@@ -3,7 +3,7 @@ import { TitleBar, GameCard } from "../../../../components";
 
 const Wishlist = () => {
 	return (
-		<div>
+		<div style={{paddingBottom: "50px"}}>
 			<TitleBar title="From your Wishlist" button="WISHLIST" />
 			<GameCard num={2} />
 		</div>

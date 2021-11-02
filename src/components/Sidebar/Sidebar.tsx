@@ -8,11 +8,11 @@ const Sidebar = () => {
 		<div className={styles.root}>
 			<div className={styles.topIcon} style={{ marginLeft: "10px" }}>
 				<IconLink
-					to="home"
+					to="games"
 					icon="game"
 					size="lg"
 					color="#fdfdfd"
-					title="This is a CLONE"
+					title="Clone Games"
 					marginRight={21}
 					paddingBottom={40}
 				/>
@@ -26,46 +26,61 @@ const Sidebar = () => {
 					paddingBottom={20}
 				/>
 				<IconLink
-					to="home"
+					to="store"
 					icon="store"
 					title="Store"
 					marginRight={30}
 					paddingBottom={20}
 				/>
 				<IconLink
-					to="home"
+					to="library"
 					icon="library"
 					title="Library"
 					marginRight={30}
 					paddingBottom={20}
 				/>
 				<IconLink
-					to="home"
+					to="games"
 					icon="game"
 					title="Game engine"
 					marginRight={30}
 					paddingBottom={20}
 				/>
+				<p style={{ color: "white"}}>
+					This website is a clone <br />
+					of the Epic store windows <br />
+					app. It is not functional <br />
+					and only made to practice <br />
+					front-end development. <br />
+					<br />
+					There is no way to
+					<br />
+					purchase any games here <br />
+					and there will never <br />
+					be any money made from <br />
+					this website.
+					
+				</p>
 			</div>
 			<div className={styles.bottom}>
 				<IconLink
-					to="home"
+					to="download"
 					icon="download"
 					title="Downloads"
 					marginRight={30}
 					paddingBottom={20}
 				/>
 				<IconLink
-					to="home"
+					to="https://github.com/jonashelgi"
 					icon="setting"
-					title="Settings"
+					title="Code"
 					marginRight={30}
 					paddingBottom={20}
 				/>
 				<IconLink
-					to="home"
-					icon="user"
-					title="Jonas Helgi"
+					to="https://github.com/jonashelgi"
+					icon="github"
+					title="@jonashelgi"
 					marginRight={30}
 					paddingBottom={20}
 				/>
